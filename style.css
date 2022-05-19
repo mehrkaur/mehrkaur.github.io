@@ -44,25 +44,12 @@ body {
 }
 
 h1 {
-    font-size: 80px;
-    margin-top: 17%;
-
-}
-
-h2 {
-    font-size: 70px;
-
-
-}
-
-h1,
-h2 {
-    color: #f9f9f9;
-    padding: 0px;
+    font-size: 60px;
+    color: #fd5800;
 }
 
 p {
-    color: #305973;
+    color: slategray;
 }
 
 
