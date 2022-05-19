@@ -48,6 +48,10 @@ h1 {
     color: #fd5800;
 }
 
+h2 {
+    color: darkcyan;
+}
+
 p {
     color: darkslategray;
 }
@@ -85,4 +89,27 @@ li a:hover:not(.active) {
 
 .active {
     background-color: darkcyan;
+}
+
+.projects_container {
+
+    width: 75%;
+    margin: auto;
+    padding: 5px;
+}
+
+.project {
+    display: flex;
+    padding: 5px;
+    background-color: rgb(112, 128, 144, .2);
+    margin-bottom: 10px;
+}
+
+.project_pic {
+    width: 50%;
+    text-align: center;
+}
+
+.project_descr {
+    text-align: left;
 }
