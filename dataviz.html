@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
 
+<!--when a new item is added:
+1) make a new div group and add image(s) and description
+2) add onclick in script at the end to get modal images to work.-->
+
 <head>
     <link rel="stylesheet" href="style.css">
     <style>
         h1 {
             text-align: center;
+        }
+
+        .project img {
+            height: 200px;
+            width: auto;
+            /*position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);*/
+            cursor: pointer;
+        }
+
+        .project img:hover {
+            opacity: .8;
+        }
+
+        a {
+            color: darkcyan;
+            text-decoration: underline;
+
+        }
+
+        a:hover {
+            color: slategray;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -24,52 +54,159 @@
     <h1>Data Visualization</h1>
 
     <div class="projects_container">
+
         <div class="project">
             <div class="project_pic">
-                x
+                <img id="housing_map" src="graphics/rezoning scrollie-08.png" alt="Affordable Housing Map"
+                    style="margin-top:3%">
+                <img id="housing_chart" src="graphics/600px_upzoning-article-pictogram-3.png"
+                    alt="Affordable Housing Graphic">
             </div>
             <div class="project_descr">
                 <h2>Morningside Heights Upzoning Proposal</h2>
+                <p>These graphics explain the cause and potential impact for proposed rezoning in Morningside Heights,
+                    Manhattan. The first graphic shows how the rezoning would allow for more affordable housing units in
+                    the area, and the second maps where affordable housing units are currently. The rezoning proposal
+                    can be found <a src="https://council.nyc.gov/land-use/plans/morningside-planning/">here</a>.</p>
+                <p>Tools Used: Adobe Illustrator, MapBox</p>
+                <p>April 2022</p>
             </div>
         </div>
 
         <div class="project">
             <div class="project_pic">
-                x
+                <img id="dei_gender" src="graphics/dei_gender_22.png" alt="DEI gender" style="margin-top:.5%">
+                <img id="dei_job" src="graphics/dei_swjob_22.png" alt="DEI non-work study job">
             </div>
             <div class="project_descr">
-                <h2>Arrests and Police Complaints by NYC Precinct</h2>
+                <h2>Diversity, Equity, and Inclusion Report 2022: Columbia Daily </h2>
+                <p>Gender Distribution and Outside Employment across all departments of the Spectator Publishing Company
+                    in the 2021-2022 academic year. To be published in <a
+                        src="http://www.specpublishing.com/">Spectator</a>'s annual DEI report.</p>
+                <p>Tools Used: Adobe Illustrator, RawGraphs</p>
+                <p>May 2022</p>
             </div>
         </div>
 
         <div class="project">
             <div class="project_pic">
-                x
+                <img id="police1" src="graphics/police_conduct-01.png" alt="arrests by precinct"
+                    style="margin-top:2.5%">
+                <img id="police2" src="graphics/police_conduct-02.png" alt="complaints by precinct">
             </div>
             <div class="project_descr">
-                <h2>Diversity, Equity, and Inclusion Report</h2>
+                <h2>Arrests and Allegations of Police Misconduct by NYC Precinct</h2>
+                <p>While playing with open-source NYC data (<a src="https://opendata.cityofnewyork.us/">OpenData</a> and
+                    <a src="https://www.propublica.org/datastore/">ProPublica</a>), I found that
+                    the same police precinct was an outlier in number of arrests since 2013 (left) and in number of
+                    complaints
+                    against police officers filed between 1985 and 2020 (right). It would be interesting to further
+                    explore this
+                    potential relationship.
+                </p>
+                <p>Tools Used: Adobe Illustrator, MapBox, Python, Pandas</p>
+                <p>March 2022</p>
             </div>
         </div>
 
         <div class="project">
             <div class="project_pic">
-                x
+                <img id="subway" src="graphics/stay_subway_safe.png" alt="subway station predicted crowd size"
+                    style="margin-top:5.5%;">
             </div>
             <div class="project_descr">
                 <h2>Stay Subway Safe</h2>
+                <p>
+                    This project aimed to predict crowd size on NYC platforms at a given time of day to mitigate the
+                    spread of COVID-19. Using open-source data from the NYC MTA, I wrote an algorithm to report a risk
+                    level for individual platforms based on calculated crowd sizes and platform
+                    dimensions. This graph shows predicted risk level (0-4) for North- and South-bound trains at W.
+                    116th Street station over the course of a given Saturday (24 hr clock). I wrote a walk-through of my
+                    team's work, found <a
+                        src="https://github.com/WenqingZhong/MassTransit/blob/master/final_mvp.ipynb">here</a>.</p>
+                <p>Tools Used: MatPlotLib</p>
+                <p>August 2020</p>
             </div>
         </div>
 
-        <div class="project">
+        <!--<div class="project">
             <div class="project_pic">
                 x
             </div>
             <div class="project_descr">
                 <h2>Astrophysics Research: Paczynski Curves</h2>
             </div>
-        </div>
+        </div>-->
 
     </div>
+
+
+    <!-- The Modal, modified from w3 schools -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - for each image
+        var img1 = document.getElementById("housing_map");
+        var modalImg = document.getElementById("img01");
+        img1.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img2 = document.getElementById("housing_chart");
+        img2.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img3 = document.getElementById("dei_gender");
+        img3.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img4 = document.getElementById("dei_job");
+        img4.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img5 = document.getElementById("police1");
+        img5.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img5 = document.getElementById("police2");
+        img5.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img6 = document.getElementById("subway");
+        img6.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+
+
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
 
 
 
