@@ -43,6 +43,44 @@ body {
 
 }
 
+
+
+.top {
+    vertical-align: middle;
+    width: 98%;
+    border: 2px solid black;
+}
+
+#top1 {
+    height: 90%;
+    width: auto;
+    margin-left: 10%;
+    margin-top: 2%;
+    padding: 0px;
+    border: 2px solid black;
+}
+
+#top2 {
+    text-align: left;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+#headshot_mini {
+    border-radius: 50%;
+    height: 75px;
+    width: auto;
+    margin: 5px;
+}
+
+.top h2 {
+    color: #fd5800;
+    vertical-align: middle;
+}
+
+
 h1 {
     font-size: 60px;
     color: #fd5800;
