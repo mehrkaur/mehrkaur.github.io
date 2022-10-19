@@ -64,6 +64,44 @@
 
         <div class="project">
             <div class="project_pic">
+                <img id="bheardmap" src="graphics/bheardmap.png" alt="Map of NYC precincts participating in B-HEARD"
+                    style="margin-top:3%">
+                <img id="bheardchart" src="graphics/bheardchart.png" alt="Mental health crisis calls routed to B-HEARD">
+            </div>
+            <div class="project_descr">
+                <h2>NYC non-police response teams for mental health crises (B-HEARD)</h2>
+                <p>This article reviews the impact and growth of the B-HEARD mental health crisis response team in NYC.
+                    I created an map showing the growth of B-HEARD since its pilot program and an alluvial diagram
+                    showing how many 911 calls they responded to. To view the graphics in the published article
+                    (including the interactive map), please click <a
+                        href="https://www.columbiaspectator.com/news/2022/10/17/as-city-doubles-down-on-b-heard-mental-health-crisis-response-some-advocates-say-it-is-not-enough/">here</a>.
+                </p>
+                <p>Tools Used: MapBox, HTML, CSS, JavaScript, Adobe Illustrator, RawGraphs</p>
+                <p>October 2022</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project_pic">
+                <img id="bathrooms" src="graphics/bathrooms.png"
+                    alt="Map of gender neutral bathrooms on Columbia's campus" style="margin-top:3%">
+            </div>
+            <div class="project_descr">
+                <h2>A History of LGBT spaces and policies at Columbia</h2>
+                <p>This story focused on LGBT student spaces and organizations at Columbia over time. Recently,
+                    Columbia's Morningside campus expanded the number of gender neutral bathrooms available to students.
+                    I created an interactive map showing how these bathrooms are distributed around campus. To view the
+                    this map interactively
+                    in the published article, please click <a
+                        href="https://www.columbiaspectator.com/news/2022/10/02/space-for-students-to-feel-safe-a-history-of-lgbtq-spaces-and-policies-at-columbia/">here</a>.
+                </p>
+                <p>Tools Used: MapBox, HTML, CSS, JavaScript</p>
+                <p>October 2022</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project_pic">
                 <img id="overall-scores" src="graphics/overall-scores.png" alt="Overall Scores Bar Graph"
                     style="margin-top:3%">
                 <img id="scores-by-race" src="graphics/scores-by-race.png" alt="Scores by Race Waffle Graph">
@@ -258,6 +296,24 @@
 
         var img9 = document.getElementById("scores-by-race");
         img9.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img10 = document.getElementById("bathrooms");
+        img10.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img11 = document.getElementById("bheardmap");
+        img11.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img12 = document.getElementById("bheardchart");
+        img12.onclick = function () {
             modal.style.display = "block";
             modalImg.src = this.src;
         }
