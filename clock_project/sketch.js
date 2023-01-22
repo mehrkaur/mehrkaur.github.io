@@ -1,9 +1,9 @@
-particles_sec = [];
-particles_min = [];
+let particles_sec = [];
+let particles_min = [];
+let once = 0;
 // setup() is called once at page-load
 function setup() {
     createCanvas(800, 660); // make an HTML canvas element width x height pixels
-
 }
 
 // draw() is called 60 times per second
@@ -12,6 +12,14 @@ function draw() {
     let min = minute();
     let sec = second();
     let hr_12 = hr;
+
+    if (sec == 0 & once == 0) {
+        print("min changed to " + min);
+        once = 1;
+    }
+    if (sec == 1) {
+        once = 0;
+    }
 
     //background color depends on am/pm
     if (hr > 12) { //ie, pm
