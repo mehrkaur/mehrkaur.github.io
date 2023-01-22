@@ -22,7 +22,7 @@ function draw() {
     }
 
     //background color depends on am/pm
-    if (hr > 12) { //ie, pm
+    if (hr >= 12) { //ie, pm
         hr_12 = hr / 2; //12 and 24 are 0
         background(71, 16, 0);
     }
