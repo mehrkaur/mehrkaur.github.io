@@ -1,6 +1,6 @@
 body {
-    background-color: antiquewhite;
-
+    /* background-color: antiquewhite; */
+    background-color: #fbfbf2;
     /*font-family: 'Candal', sans-serif;*/
     font-family: Garamond, serif;
 }
@@ -18,9 +18,19 @@ body {
 
 #title {
     vertical-align: middle;
-    background-color: #ed5502;
+    background-color: #e0dfd5;
+    background-color: #fbfbf2;
     width: 100%;
-    height: 40%;
+    height: 50%;
+
+    display: flex;
+    text-align: center;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    padding: 0 4%;
+    /* padding-left: 7%; */
+    display: block;
+    text-align: center;
 
 
 }
@@ -30,16 +40,19 @@ body {
     text-align: left;
     line-height: 1.5;
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
+
 }
 
 #headshot {
     border-radius: 50%;
-    height: 90%;
+    height: 95%;
     width: auto;
-    margin-left: 10%;
-    margin-top: 2%;
-    padding: 0px;
+    margin-left: 7%;
+    margin-top: 0%;
+    /* padding: 10px; */
+
+
 
 }
 
@@ -48,7 +61,7 @@ body {
 .top {
     vertical-align: middle;
     width: 98%;
-    border: 2px solid black;
+    border: 2px solid #2e282a;
 }
 
 #top1 {
@@ -57,7 +70,8 @@ body {
     margin-left: 10%;
     margin-top: 2%;
     padding: 0px;
-    border: 2px solid black;
+    border: 2px solid #2e282a;
+
 }
 
 #top2 {
@@ -65,7 +79,7 @@ body {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    border: 2px solid black;
+    border: 2px solid #2e282a;
 }
 
 #headshot_mini {
@@ -76,29 +90,33 @@ body {
 }
 
 .top h2 {
-    color: #ed5502;
+    /* color: #ed5502; */
+    color: #fbfbf2;
     vertical-align: middle;
 }
 
 
 h1 {
     font-size: 60px;
-    color: #ed5502;
+    /* color: #ed5502; */
+    color: #f06543;
+    margin-bottom: 0%;
 }
 
 h2 {
-    color: darkcyan;
+    color: #f06543;
 }
 
 p {
-    color: darkslategray;
+    color: #2e282a;
 }
 
 
 #nav {
     margin-top: 2%;
     margin-bottom: 5%;
-    background-color: lightgrey;
+    background-color: #fbfbf2;
+    font-size: 15pt;
 }
 
 ul {
@@ -107,7 +125,7 @@ ul {
     padding: 0;
     overflow: hidden;
     /* background-color: #ed5502; #fd5800*/
-    background-color: #ed5502;
+    background-color: #fbfbf2;
 }
 
 li {
@@ -116,18 +134,19 @@ li {
 
 li a {
     display: block;
-    color: antiquewhite;
+    color: #2e282a;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    background-color: slategrey;
+    color: #f06543;
 }
 
 .active {
-    background-color: darkcyan;
+    color: #f06543;
+    font-weight: bold;
 }
 
 .projects_container {
@@ -140,7 +159,7 @@ li a:hover:not(.active) {
 .project {
     display: flex;
     padding: 5px;
-    background-color: rgb(112, 128, 144, .2);
+    /* background-color: rgb(112, 128, 144, .2); */
     margin-bottom: 10px;
 }
 
@@ -176,7 +195,7 @@ li a:hover:not(.active) {
     /* Enable scroll if needed */
     background-color: rgb(255, 255, 255);
     /* Fallback color */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     /* Black w/ opacity */
 }
 
@@ -194,7 +213,7 @@ li a:hover:not(.active) {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: darkslategray;
+    color: #2e282a;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -202,7 +221,12 @@ li a:hover:not(.active) {
 
 .close:hover,
 .close:focus {
-    color: slategray;
+    color: #f06543;
     text-decoration: none;
     cursor: pointer;
+}
+
+hr {
+    border: .25px solid #f06543;
+    width: 75%;
 }
